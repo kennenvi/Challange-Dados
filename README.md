@@ -17,7 +17,7 @@ Rápida descrição do objetivo de fazer esse projeto
 Esse projeto foi feito para o Desafio dados, onde será contruído um modelo de aprendizado de máquina para gerar preços de imóveis
 com base em um dataset processado com o PySpark.
 
-### Processamento do COnjunto de dados com PySpark
+### Processamento do Conjunto de dados com PySpark
 
 Nessa estapa foi utilizado o PySpark no Google Colab para:
 
