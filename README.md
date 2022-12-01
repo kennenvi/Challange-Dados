@@ -1,10 +1,10 @@
-# Nome do meu projeto
+# Modelo de recomendação de preços de imóveis com Python
 
 Rápida descrição do objetivo de fazer esse projeto
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Modelo de previsão de preços de imóveis com Python**
+| :sparkles: Nome        | **Desafio Data Science Alura**
 | :label: Tecnologias | python, pyspark
 | :rocket: URL         | https://url-deploy.com.br
 | :fire: Desafio     | https://url-do-desafio.com.br
