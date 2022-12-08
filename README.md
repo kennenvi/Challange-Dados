@@ -2,7 +2,7 @@
 
 Rápida descrição do objetivo de fazer esse projeto
 
-| :placard: Vitrine.Dev |     |
+| :placard: Vitrine.Dev | https://cursos.alura.com.br/vitrinedev/gabrielzuli22 |
 | -------------  | --- |
 | :sparkles: Nome        | **Desafio Data Science Alura**
 | :label: Tecnologias | Python, PySpark
