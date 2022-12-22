@@ -32,10 +32,10 @@ class ImovelForm(FlaskForm):
     area_total = FloatField('Area do imóvel', [validators.DataRequired()])
     banheiros = IntegerField('Banheiros', [validators.DataRequired()])
     quartos = IntegerField('Quartos', [validators.DataRequired()])
-    suites = IntegerField('Suites', [validators.DataRequired()])
-    vaga = IntegerField('Vaga', [validators.DataRequired()])
-    condominio = FloatField('Valor comdomínio', [validators.DataRequired()])
-    iptu = FloatField('Valor IPTU', [validators.DataRequired()])
+    suites = IntegerField('Suites', [validators.InputRequired()])
+    vaga = IntegerField('Vaga', [validators.InputRequired()])
+    condominio = FloatField('Valor comdomínio', [validators.InputRequired()])
+    iptu = FloatField('Valor IPTU', [validators.InputRequired()])
 
     # create a list of value/description tuples
     files = [(x, x) for x in check_box_caracteristicas]

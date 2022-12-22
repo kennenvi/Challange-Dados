@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 {% block conteudo %}
-    <form method="post" action="{{ url_for('movel') }}">
+    <form method="post" action="{{ url_for('prever') }}">
         {{ form.hidden_tag() }}
         <div class="form-group inputBox">
             {{ form.andar.label(class="form-label") }}
