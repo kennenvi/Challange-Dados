@@ -1,7 +1,8 @@
 {% extends "template.html" %}
 {% block conteudo %}
 
-<form class="formularioJogo" action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
+<form class="formularioJogo" action="{{ url_for('criar') }}" method="post">
+    <!-- enctype="multipart/form-data"> -->
 
     <!-- <figure class="img-thumbnail col-md-4 formularioImagem">
       <img class="img-fluid" src="{{ url_for('imagem', nome_arquivo='capa_padrao.jpg') }}" alt="">
