@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <form method="post" action="{{ url_for('movel') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group inputBox">
+            {{ form.caracteristicas.label(class="form-label") }}
+            {{ form.caracteristicas(class="form-control") }}
+        </div>
+        <div class="form-group inputBox">
+            {{ form.localizacao.label(class="form-label") }}
+            {{ form.localizacao(class="form-control") }}
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

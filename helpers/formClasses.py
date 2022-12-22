@@ -1,29 +1,45 @@
 from flask_wtf import FlaskForm
-from wtforms import IntegerField, FloatField, validators
+from wtforms import IntegerField, FloatField, validators, RadioField
+from wtforms import widgets, SelectMultipleField
 
+
+class MultiCheckboxField(SelectMultipleField):
+    widget = widgets.ListWidget(prefix_label=False)
+    option_widget = widgets.CheckboxInput()
+
+check_box_caracteristicas = [
+    'Academia',
+    'Animais permitidos',
+    'Churrasqueira',
+    'Condomínio fechado',
+    'Elevador',
+    'Piscina',
+    'Playground',
+    'Portaria 24h',
+    'Portão eletrônico',
+    'Salão de festas',
+]
+
+check_box_localizacao = [
+    'Zona Central',
+    'Zona Norte',
+    'Zona Oeste',
+    'Zona Sul'
+]
 
 class MovelForm(FlaskForm):
-    andar = IntegerField('Andar', [validators.DataRequired()])
-    area_total = FloatField('Area do imóvel', [validators.DataRequired()])
-    banheiros = IntegerField('Banheiros', [validators.DataRequired()])
-    quartos = IntegerField('Quartos', [validators.DataRequired()])
-    suites = IntegerField('Suites', [validators.DataRequired()])
-    vaga = IntegerField('Vaga', [validators.DataRequired()])
-    condominio = FloatField('Valor comdomínio', [validators.DataRequired()])
-    iptu = FloatField('Valor IPTU', [validators.DataRequired()])
-    
+    # andar = IntegerField('Andar', [validators.DataRequired()])
+    # area_total = FloatField('Area do imóvel', [validators.DataRequired()])
+    # banheiros = IntegerField('Banheiros', [validators.DataRequired()])
+    # quartos = IntegerField('Quartos', [validators.DataRequired()])
+    # suites = IntegerField('Suites', [validators.DataRequired()])
+    # vaga = IntegerField('Vaga', [validators.DataRequired()])
+    # condominio = FloatField('Valor comdomínio', [validators.DataRequired()])
+    # iptu = FloatField('Valor IPTU', [validators.DataRequired()])
 
-    # 'Academia',
-    # 'Animais permitidos',
-    # 'Churrasqueira',
-    # 'Condomínio fechado',
-    # 'Elevador',
-    # 'Piscina',
-    # 'Playground',
-    # 'Portaria 24h',
-    # 'Portão eletrônico',
-    # 'Salão de festas',
-    # 'Zona Central',
-    # 'Zona Norte',
-    # 'Zona Oeste',
-    # 'Zona Sul'
+    # create a list of value/description tuples
+    files = [(x, x) for x in check_box_caracteristicas]
+    caracteristicas = MultiCheckboxField('Características', choices=files)
+    files2 = [(x, x) for x in check_box_localizacao]
+    localizacao = RadioField('Localização', choices=files2)
+
