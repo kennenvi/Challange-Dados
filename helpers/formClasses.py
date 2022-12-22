@@ -27,15 +27,15 @@ check_box_localizacao = [
     'Zona Sul'
 ]
 
-class MovelForm(FlaskForm):
-    # andar = IntegerField('Andar', [validators.DataRequired()])
-    # area_total = FloatField('Area do imóvel', [validators.DataRequired()])
-    # banheiros = IntegerField('Banheiros', [validators.DataRequired()])
-    # quartos = IntegerField('Quartos', [validators.DataRequired()])
-    # suites = IntegerField('Suites', [validators.DataRequired()])
-    # vaga = IntegerField('Vaga', [validators.DataRequired()])
-    # condominio = FloatField('Valor comdomínio', [validators.DataRequired()])
-    # iptu = FloatField('Valor IPTU', [validators.DataRequired()])
+class ImovelForm(FlaskForm):
+    andar = IntegerField('Andar', [validators.DataRequired()])
+    area_total = FloatField('Area do imóvel', [validators.DataRequired()])
+    banheiros = IntegerField('Banheiros', [validators.DataRequired()])
+    quartos = IntegerField('Quartos', [validators.DataRequired()])
+    suites = IntegerField('Suites', [validators.DataRequired()])
+    vaga = IntegerField('Vaga', [validators.DataRequired()])
+    condominio = FloatField('Valor comdomínio', [validators.DataRequired()])
+    iptu = FloatField('Valor IPTU', [validators.DataRequired()])
 
     # create a list of value/description tuples
     files = [(x, x) for x in check_box_caracteristicas]

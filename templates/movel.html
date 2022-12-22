@@ -1,38 +1,40 @@
 {% extends "template.html" %}
 {% block conteudo %}
-
-<form class="formularioJogo" action="{{ url_for('criar') }}" method="post">
-    <!-- enctype="multipart/form-data"> -->
-
-    <!-- <figure class="img-thumbnail col-md-4 formularioImagem">
-      <img class="img-fluid" src="{{ url_for('imagem', nome_arquivo='capa_padrao.jpg') }}" alt="">
-      <figcaption>
-        <label class="fileContainer" for="">
-          Mudar capa
-          <input type="file" name="arquivo" id="arquivo" accept=".jpg">
-        </label>
-      </figcaption>
-    </figure> -->
-
-    <fieldset>
-      {{ form.csrf_token() }}
-      <div class="form-group inputBox">
-        {{ form.nome.label(class="form-label") }}
-        {{ form.nome(class="form-control") }}
-      </div>
-      <div class="form-group inputBox">
-        {{ form.categoria.label(class="form-label") }}
-        {{ form.categoria(class="form-control") }}
-      </div>
-      <div class="form-group inputBox">
-        {{ form.console.label(class="form-label") }}
-        {{ form.console(class="form-control") }}
-      </div>
-      <div class="form-group buttons">
-        {{ form.salvar(class='btn btn-primary') }}
-        <a class="btn btn-danger" href="{{ url_for('index') }}">Voltar</a>
-      </div>
-    </fieldset>
-  </form>
-
+    <form method="post" action="{{ url_for('movel') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group inputBox">
+            {{ form.andar.label(class="form-label") }}
+            {{ form.andar(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.area_total.label(class="form-label") }}
+            {{ form.area_total(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.banheiros.label(class="form-label") }}
+            {{ form.banheiros(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.quartos.label(class="form-label") }}
+            {{ form.quartos(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.suites.label(class="form-label") }}
+            {{ form.suites(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.vaga.label(class="form-label") }}
+            {{ form.vaga(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.condominio.label(class="form-label") }}
+            {{ form.condominio(class="form-control") }}
+        </div><div class="form-group inputBox">
+            {{ form.iptu.label(class="form-label") }}
+            {{ form.iptu(class="form-control") }}
+        </div>
+        <div class="form-group inputBox">
+            {{ form.caracteristicas.label(class="form-label") }}
+            {{ form.caracteristicas(class="form-control") }}
+        </div>
+        <div class="form-group inputBox">
+            {{ form.localizacao.label(class="form-label") }}
+            {{ form.localizacao(class="form-control") }}
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
 {% endblock %}
